@@ -11,6 +11,12 @@ config_version=5
 [application]
 
 config/name="Scandiman [IFI7381.DT-2026S]"
+config/description="This project is created for the Basics of Game Development IFI7381.DT 2026S course's (MSc Digital Learning Games in Tallinn University) assignment purposes. The goal of the project (and thus of the course, I hope) is to get used with Godot and develop a simple digital prototype.
+
+This project is inspired by my first year small projects; Scandurak, a Durak reskin with Nordic language words and power dynamic, and A Cool Game, a Puzzle Script prototype where the player spelled Cool with the ice physics. 
+
+My main goal of the project is to learn how to make tile maps in Godot and potentially transfer information between scenes."
+config/version="0.0.1"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
