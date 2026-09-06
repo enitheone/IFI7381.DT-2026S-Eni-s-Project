@@ -1,0 +1,5 @@
+Game Idea: A Pac-man clone with spelling involved.
+
+Goal of the game: the player collects the correct letters to spell out the hinted word while avoiding enemies.
+
+Advanced goal: words are in Nordic languages (Swedish, Danish, Norwegian, Finnish) and hints are in English.
