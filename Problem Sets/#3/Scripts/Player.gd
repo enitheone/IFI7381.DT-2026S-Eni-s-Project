@@ -56,6 +56,12 @@ var a = c - b
 var b = 10
 
 '''
+#Part 1
+var health: int = 100 #— an integer, starting at 100
+const max_health: int = 100 #— an integer, also 100 (make this one a constant)
+var speed: int = 50  #— an integer, starting at 50
+var player_name: String = "Aye" #— a string, set to whatever you like
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
