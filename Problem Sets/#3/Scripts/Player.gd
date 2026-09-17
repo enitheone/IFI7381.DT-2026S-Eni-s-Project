@@ -75,8 +75,14 @@ func take_damage(amount: int = 0):
 		health -= amount
 		print("Took damage: ",amount)
 
+func take_hits(times: int = 0, damage: int = 0):
+	while times < 0:
+		print("Remaining hits: ", times)
+		take_damage(damage)
+		times -= 1
+	inform_stats()
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	inform_stats()
-	take_damage(15)
-	inform_stats()
+	take_hits(2,15)
