@@ -63,22 +63,28 @@ var speed: int = 50  #— an integer, starting at 50
 var player_name: String = "Aye" #— a string, set to whatever you like
 
 #Part 2
+func update_speed(restore: bool = false):
+	if restore:
+		print("Speed is restoring.")
+	else:
+		print("Speed is decreasing.")
+	speed = health / 2
+
 func inform_stats():
 	print("Player: ", player_name," || Health/Max Health: ",health,"/",max_health, "|| Speed: ", speed)
 
 func take_damage(amount: int = 0):
 	var delta: = health - amount
 	if delta < 0:
-		health = 0
-		print("Took so much damage that the player should be dead.")
-	else:
-		health -= amount
-		print("Took damage: ",amount)
+		amount = delta + amount
+	health -= amount
+	print("Takes damage: ",amount)
 
 func take_hits(times: int = 0, damage: int = 0):
 	while times > 0:
-		print("Remaining hits: ", times)
+		print("Hits left: ", times)
 		take_damage(damage)
+		update_speed()
 		times -= 1
 	inform_stats()
 
@@ -88,8 +94,9 @@ func heal(amount: int = 0):
 		var delta: = health + amount
 		if delta > max_health:
 			amount = max_health - health
-		print("Healing: ", amount)
+		print("Heal: ", amount)
 		health += amount
+		update_speed(true)
 	inform_stats()
 #Part 4
 func calc_1(a: int = 0):
@@ -118,9 +125,11 @@ func calcFun():
 	print("Second Fun a starts: ", a)
 	a = calc_2(a,b)
 	print("Second Fun a ends: ", a)
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	inform_stats()
-	take_hits(2,15)
+	take_hits(8,15)
 	heal(7)
 	calcFun()
