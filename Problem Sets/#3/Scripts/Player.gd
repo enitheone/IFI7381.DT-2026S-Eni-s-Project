@@ -82,7 +82,18 @@ func take_hits(times: int = 0, damage: int = 0):
 		times -= 1
 	inform_stats()
 
+#Part 3
+func heal(amount: int = 0):
+	while health < max_health:
+		var delta: = health + amount
+		if delta > max_health:
+			delta = max_health - amount
+		print("Healing: ", delta)
+		health += delta
+	inform_stats()
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	inform_stats()
 	take_hits(2,15)
+	heal(7)
