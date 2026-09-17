@@ -64,7 +64,7 @@ var player_name: String = "Aye" #— a string, set to whatever you like
 
 #Part 2
 func inform_stats():
-	print("Player: ", player_name," || Health/Max Health: ",health,"/",max_health)
+	print("Player: ", player_name," || Health/Max Health: ",health,"/",max_health, "|| Speed: ", speed)
 
 func take_damage(amount: int = 0):
 	var delta: = health - amount
