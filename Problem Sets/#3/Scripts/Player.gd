@@ -119,12 +119,12 @@ func calc_2(a: int = 0, b: int = 0):
 	return new_a
 	
 func calcFun():
-	var a: int = 579
+	var a: int = 5
 	print("First Fun a starts: ", a)
 	a = calc_1(a)
 	print("First Fun a ends: ", a)
-	a = 3135
-	var b: int = 1100
+	a = 3
+	var b: int = 2
 	print("Second Fun a starts: ", a)
 	a = calc_2(a,b)
 	print("Second Fun a ends: ", a)
