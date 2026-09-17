@@ -62,6 +62,19 @@ const max_health: int = 100 #— an integer, also 100 (make this one a constant)
 var speed: int = 50  #— an integer, starting at 50
 var player_name: String = "Aye" #— a string, set to whatever you like
 
+#Part 2
+func inform_stats():
+	print("Player: ", player_name," || Health/Max Health: ",health,"/",max_health)
+
+func take_damage(amount: int = 0):
+	var delta: = health - amount
+	if delta < 0:
+		delta = 0
+	health = delta
+	print("Took damage: ",delta)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	inform_stats()
+	take_damage(15)
+	inform_stats()
