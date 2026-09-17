@@ -91,9 +91,36 @@ func heal(amount: int = 0):
 		print("Healing: ", amount)
 		health += amount
 	inform_stats()
+#Part 4
+func calc_1(a: int = 0):
+	var new_a = a
+	new_a = new_a + 3
+	new_a = 5
+	new_a = new_a + new_a
+	return new_a
 
+func calc_2(a: int = 0, b: int = 0):
+	var new_a = a
+	var new_b = b
+	var c = new_a + new_b
+	new_b = 0
+	new_a = c - new_b
+	new_b = 10
+	return new_a
+	
+func calcFun():
+	var a: int = 5
+	print("First Fun a starts: ", a)
+	a = calc_1(a)
+	print("First Fun a ends: ", a)
+	a = 3
+	var b: int = 2
+	print("Second Fun a starts: ", a)
+	a = calc_2(a,b)
+	print("Second Fun a ends: ", a)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	inform_stats()
 	take_hits(2,15)
 	heal(7)
+	calcFun()
