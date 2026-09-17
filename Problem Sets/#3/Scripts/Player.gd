@@ -87,9 +87,9 @@ func heal(amount: int = 0):
 	while health < max_health:
 		var delta: = health + amount
 		if delta > max_health:
-			delta = max_health - amount
-		print("Healing: ", delta)
-		health += delta
+			amount = max_health - health
+		print("Healing: ", amount)
+		health += amount
 	inform_stats()
 
 # Called when the node enters the scene tree for the first time.
