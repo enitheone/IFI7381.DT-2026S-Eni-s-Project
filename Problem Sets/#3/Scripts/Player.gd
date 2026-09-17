@@ -62,7 +62,7 @@ const max_health: int = 100 #— an integer, also 100 (make this one a constant)
 var speed: int = 50  #— an integer, starting at 50
 var player_name: String = "Aye" #— a string, set to whatever you like
 
-#Part 2
+#Bonus
 func update_speed(restore: bool = false):
 	if restore:
 		print(player_name,"'s speed has recovered.")
@@ -70,6 +70,7 @@ func update_speed(restore: bool = false):
 		print(player_name,"'s speed has decreased.")
 	speed = int(health / floor(2)) #ENi Note: d2clon's response in https://www.reddit.com/r/godot/comments/h836lc/how_to_integer_divide_without_a_warning/
 
+#Part 2
 func inform_stats():
 	print("Player: ", player_name," || Health/Max Health: ",health,"/",max_health, " || Speed: ", speed)
 
