@@ -71,7 +71,7 @@ func update_speed(restore: bool = false):
 	speed = int(health / floor(2)) #ENi Note: d2clon's response in https://www.reddit.com/r/godot/comments/h836lc/how_to_integer_divide_without_a_warning/
 
 func inform_stats():
-	print("Player: ", player_name," || Health/Max Health: ",health,"/",max_health, "|| Speed: ", speed)
+	print("Player: ", player_name," || Health/Max Health: ",health,"/",max_health, " || Speed: ", speed)
 
 func take_damage(amount: int = 0):
 	var delta: = health - amount
