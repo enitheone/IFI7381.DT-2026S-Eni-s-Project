@@ -69,9 +69,11 @@ func inform_stats():
 func take_damage(amount: int = 0):
 	var delta: = health - amount
 	if delta < 0:
-		delta = 0
-	health = delta
-	print("Took damage: ",delta)
+		health = 0
+		print("Took so much damage that the player should be dead.")
+	else:
+		health -= amount
+		print("Took damage: ",amount)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
