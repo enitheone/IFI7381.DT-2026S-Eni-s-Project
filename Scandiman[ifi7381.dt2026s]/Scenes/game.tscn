@@ -416,8 +416,14 @@ position = Vector2(100, -24)
 [node name="WnbPlatform_Standing" parent="." unique_id=1430652400 instance=ExtResource("3_3dryh")]
 position = Vector2(0, -115)
 
-[node name="Flame" parent="." unique_id=966235561 instance=ExtResource("6_i6g32")]
+[node name="Flame A" parent="." unique_id=966235561 instance=ExtResource("6_i6g32")]
 position = Vector2(0, -149)
+
+[node name="Flame B" parent="." unique_id=1757104027 instance=ExtResource("6_i6g32")]
+position = Vector2(0, -94)
+
+[node name="Flame C" parent="." unique_id=128882338 instance=ExtResource("6_i6g32")]
+position = Vector2(132, -193)
 
 [node name="WnbPlatform_MovingX" parent="." unique_id=801479556 instance=ExtResource("4_3dryh")]
 position = Vector2(90, -89)

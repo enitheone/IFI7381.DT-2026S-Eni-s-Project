@@ -28,14 +28,15 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_32ndw"]
 radius = 4.0
 
-[node name="Flame" type="Area2D" unique_id=966235561]
+[node name="Blue Flame" type="Area2D" unique_id=966235561]
+collision_layer = 2
 script = ExtResource("1_odbei")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1837451006]
 sprite_frames = SubResource("SpriteFrames_32ndw")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.15471545
+frame_progress = 0.9018618
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=494699044]
 shape = SubResource("CircleShape2D_32ndw")
