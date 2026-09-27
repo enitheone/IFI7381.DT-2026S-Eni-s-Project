@@ -1,17 +1,17 @@
-[gd_scene format=3 uid="uid://5fifwoh6rwrj"]
+[gd_scene format=3 uid="uid://bqte6oyf1nx4w"]
 
-[ext_resource type="Texture2D" uid="uid://b85xr5thi7qhh" path="res://Assets/Graphics/dungeon_tiles_eniEdit.png" id="1_oxp4x"]
+[ext_resource type="Texture2D" uid="uid://b85xr5thi7qhh" path="res://Assets/Graphics/dungeon_tiles_eniEdit.png" id="1_r6x6m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_32ndw"]
 size = Vector2(17, 12)
 
-[node name="WnbPlatform_MovingX" type="AnimatableBody2D" unique_id=1430652400]
+[node name="WnbPlatform_MovingY" type="AnimatableBody2D" unique_id=1430652400]
 z_index = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1511789167]
-texture = ExtResource("1_oxp4x")
+texture = ExtResource("1_r6x6m")
 region_enabled = true
-region_rect = Rect2(280, 151, 17, 20)
+region_rect = Rect2(280, 183, 17, 20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1488496505]
 position = Vector2(-0.5, 4)

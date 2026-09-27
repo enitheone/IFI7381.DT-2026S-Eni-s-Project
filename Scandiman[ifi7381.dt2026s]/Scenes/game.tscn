@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://5ujt1q5eopod" path="res://Scenes/wnb_platform_standing.tscn" id="3_3dryh"]
 [ext_resource type="Texture2D" uid="uid://b85xr5thi7qhh" path="res://Assets/Graphics/dungeon_tiles_eniEdit.png" id="3_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://5fifwoh6rwrj" path="res://Scenes/wnb_platform_movingX.tscn" id="4_3dryh"]
+[ext_resource type="PackedScene" uid="uid://bqte6oyf1nx4w" path="res://Scenes/wnb_platform_movingY.tscn" id="5_wowpa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3dryh"]
 texture = ExtResource("3_wrm1d")
@@ -325,6 +326,83 @@ texture = ExtResource("3_wrm1d")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_3dryh")
 
+[sub_resource type="Animation" id="Animation_3dryh"]
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-77, -16), Vector2(67, -16)]
+}
+
+[sub_resource type="Animation" id="Animation_wowpa"]
+resource_name = "move"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-77, -16), Vector2(67, -16)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i6g32"]
+_data = {
+&"RESET": SubResource("Animation_3dryh"),
+&"move": SubResource("Animation_wowpa")
+}
+
+[sub_resource type="Animation" id="Animation_i6g32"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-105, 19)]
+}
+
+[sub_resource type="Animation" id="Animation_1l0tm"]
+resource_name = "move"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-105, 19), Vector2(-105, -50)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v158k"]
+_data = {
+&"RESET": SubResource("Animation_i6g32"),
+&"move": SubResource("Animation_1l0tm")
+}
+
 [node name="Game" type="Node2D" unique_id=1904866137]
 
 [node name="Layer0" type="TileMapLayer" parent="." unique_id=1413660967]
@@ -332,11 +410,22 @@ use_parent_material = true
 tile_map_data = PackedByteArray("AAD6/wEAAAAAAAUAAAD7/wEAAAABAAUAAAD8/wEAAAACAAUAAAD9/wEAAAADAAUAAAD+/wEAAAABAAUAAAD//wEAAAACAAUAAAAAAAEAAAADAAUAAAABAAEAAAABAAUAAAACAAEAAAACAAUAAAADAAEAAAADAAUAAAAEAAEAAAAEAAUAAAD6/wAAAAAAAAQAAAD7/wAAAAABAAQAAAD8/wAAAAACAAQAAAD9/wAAAAADAAQAAAD+/wAAAAABAAQAAAD//wAAAAACAAQAAAAAAAAAAAADAAQAAAABAAAAAAABAAQAAAACAAAAAAACAAQAAAADAAAAAAADAAQAAAAEAAAAAAAEAAQAAAD6////AAAAAAMAAAAEAP//AAAEAAMAAAD7////AAABAAMAAAD8////AAACAAMAAAD9////AAADAAMAAAD+////AAABAAMAAAD/////AAACAAMAAAAAAP//AAADAAMAAAABAP//AAABAAMAAAACAP//AAACAAMAAAADAP//AAADAAMAAAD6//z/AAAAAAAAAAD6//3/AAAAAAEAAAD6//7/AAAAAAIAAAD7//z/AAABAAAAAAD7//3/AAABAAEAAAD7//7/AAABAAIAAAD8//z/AAABAAAAAAD8//3/AAABAAEAAAD8//7/AAABAAIAAAD9//z/AAACAAAAAAD9//3/AAACAAEAAAD9//7/AAACAAIAAAD+//z/AAADAAAAAAD+//3/AAADAAEAAAD+//7/AAADAAIAAAD///z/AAABAAAAAAD///3/AAABAAEAAAD///7/AAABAAIAAAAAAPz/AAACAAAAAAAAAP3/AAACAAEAAAAAAP7/AAACAAIAAAABAPz/AAADAAAAAAABAP3/AAADAAEAAAABAP7/AAADAAIAAAACAPz/AAACAAAAAAACAP3/AAACAAEAAAACAP7/AAACAAIAAAADAPz/AAADAAAAAAADAP3/AAADAAEAAAADAP7/AAADAAIAAAAEAPz/AAAEAAAAAAAEAP3/AAAEAAEAAAAEAP7/AAAEAAIAAAAFAAAAAAAMAAIAAAAFAP//AAAMAAAAAAAGAAAAAAANAAIAAAAHAAAAAAAOAAIAAAAGAP//AAANAAAAAAAHAP//AAAOAAAAAAAIAP7/AAAMAAEAAAAIAP//AAAMAAEAAAAIAAAAAAAMAAIAAAAJAP7/AAANAAEAAAAJAP//AAANAAEAAAAJAAAAAAANAAIAAAAKAP7/AAAOAAEAAAAKAP//AAAOAAEAAAAKAAAAAAAOAAIAAAAIAP3/AAAMAAAAAAAJAP3/AAANAAAAAAAKAP3/AAAOAAAAAAALAPr/AAAMAAAAAAALAPv/AAAMAAEAAAAMAPr/AAANAAAAAAAMAPv/AAANAAEAAAANAPr/AAAOAAAAAAANAPv/AAAOAAEAAAALAP//AAAMAAEAAAALAAAAAAAMAAIAAAAMAP//AAANAAEAAAAMAAAAAAANAAIAAAANAP//AAAOAAEAAAANAAAAAAAOAAIAAAALAPz/AAAMAAEAAAAMAPz/AAANAAEAAAANAPz/AAAOAAEAAAALAP3/AAAMAAEAAAAMAP3/AAANAAEAAAANAP3/AAAOAAEAAAALAP7/AAAMAAEAAAAMAP7/AAANAAEAAAANAP7/AAAOAAEAAAA=")
 tile_set = SubResource("TileSet_cex7n")
 
-[node name="WnbPlatform_Standing" parent="." unique_id=1430652400 instance=ExtResource("3_3dryh")]
-position = Vector2(47, -11)
-
 [node name="Player" parent="." unique_id=505526369 instance=ExtResource("2_wrm1d")]
 position = Vector2(100, -24)
 
 [node name="WnbPlatform_MovingX" parent="." unique_id=1649554720 instance=ExtResource("4_3dryh")]
 position = Vector2(-77, -16)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WnbPlatform_MovingX" unique_id=1493012265]
+libraries/ = SubResource("AnimationLibrary_i6g32")
+autoplay = &"RESET"
+
+[node name="WnbPlatform_MovingY" parent="." unique_id=1950173710 instance=ExtResource("5_wowpa")]
+position = Vector2(-105, 19)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WnbPlatform_MovingY" unique_id=312705412]
+libraries/ = SubResource("AnimationLibrary_v158k")
+autoplay = &"move"
+
+[node name="WnbPlatform_Standing" parent="." unique_id=1430652400 instance=ExtResource("3_3dryh")]
+position = Vector2(-60, -75)
