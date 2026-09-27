@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dol7wjq64lfka"]
+
+[ext_resource type="AudioStream" uid="uid://m40ay68og3aw" path="res://Assets/Sounds/Memoraphile - Spooky Dungeon.ogg" id="1_fbmny"]
+
+[node name="Music" type="AudioStreamPlayer2D" unique_id=288224193]
+stream = ExtResource("1_fbmny")
+autoplay = true
+bus = &"Music"
