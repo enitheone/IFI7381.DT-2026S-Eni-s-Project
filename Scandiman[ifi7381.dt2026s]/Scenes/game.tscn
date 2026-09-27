@@ -335,7 +335,8 @@ tile_set = SubResource("TileSet_cex7n")
 [node name="WnbPlatform_Standing" parent="." unique_id=1430652400 instance=ExtResource("3_3dryh")]
 position = Vector2(47, -11)
 
-[node name="WnbPlatform_MovingX" parent="." unique_id=1058767309 instance=ExtResource("4_3dryh")]
-
 [node name="Player" parent="." unique_id=505526369 instance=ExtResource("2_wrm1d")]
 position = Vector2(100, -24)
+
+[node name="WnbPlatform_MovingX" parent="." unique_id=1649554720 instance=ExtResource("4_3dryh")]
+position = Vector2(-77, -16)
