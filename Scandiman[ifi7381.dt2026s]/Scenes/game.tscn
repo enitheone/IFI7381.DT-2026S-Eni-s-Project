@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bqte6oyf1nx4w" path="res://Scenes/wnb_platform_movingY.tscn" id="5_wowpa"]
 [ext_resource type="PackedScene" uid="uid://b05ct4x08qxeq" path="res://Scenes/flame.tscn" id="6_i6g32"]
 [ext_resource type="PackedScene" uid="uid://y1aen1aa2kqe" path="res://Scenes/killzone.tscn" id="7_1l0tm"]
+[ext_resource type="PackedScene" uid="uid://ci0wih611v3ef" path="res://Scenes/ghost.tscn" id="9_h4fw4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3dryh"]
 resource_name = "Ground"
@@ -421,3 +422,6 @@ autoplay = &"move"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1425330210]
 position = Vector2(-101, 55)
 shape = SubResource("WorldBoundaryShape2D_32ndw")
+
+[node name="Ghost" parent="." unique_id=1078412206 instance=ExtResource("9_h4fw4")]
+position = Vector2(-28, 11)
