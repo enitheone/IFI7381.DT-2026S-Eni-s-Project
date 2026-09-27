@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b05ct4x08qxeq"]
 
 [ext_resource type="Texture2D" uid="uid://eh3myq52o6kl" path="res://Assets/Graphics/Ghosty_Anim.png" id="1_o8fj5"]
+[ext_resource type="Script" uid="uid://di07lmcwt4ads" path="res://Scripts/flame.gd" id="1_odbei"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_odbei"]
 atlas = ExtResource("1_o8fj5")
@@ -28,12 +29,15 @@ animations = [{
 radius = 4.0
 
 [node name="Flame" type="Area2D" unique_id=966235561]
+script = ExtResource("1_odbei")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1837451006]
 sprite_frames = SubResource("SpriteFrames_32ndw")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.92776275
+frame_progress = 0.15471545
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=494699044]
 shape = SubResource("CircleShape2D_32ndw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
