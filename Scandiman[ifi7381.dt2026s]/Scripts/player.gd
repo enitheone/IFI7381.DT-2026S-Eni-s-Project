@@ -14,17 +14,27 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		animated_sprite.play("move")
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	# Tutorial got to this point. 
+	# Input.get_axis apparently returns -1 (left), 0 (no input) or 1 (right.
 	var direction := Input.get_axis("move_left", "move_right")
+	
+	#Tutorial put the sprite flipping here.
+	# ENI Note: else if and else did not work originally.
+	# Remember elif for Godot.
+	if direction > 0:
+		animated_sprite.flip_h = false
+	elif direction < 0:
+		animated_sprite.flip_h = true
+		
+	
+	#..apply movement.
 	if direction:
 		velocity.x = direction * SPEED
-		if direction > 0:
-			animated_sprite.flip_h = false
-		if direction < 0:
-			animated_sprite.flip_h = true
+		animated_sprite.play("move")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		animated_sprite.stop()
 
 	move_and_slide()
