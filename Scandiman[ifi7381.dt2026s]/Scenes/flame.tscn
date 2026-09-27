@@ -41,4 +41,14 @@ frame_progress = 0.6693634
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=494699044]
 shape = SubResource("CircleShape2D_32ndw")
 
+[node name="Label" type="Label" parent="." unique_id=154043465]
+offset_left = -7.0
+offset_top = -16.0
+offset_right = 9.0
+offset_bottom = -4.0
+theme_override_font_sizes/font_size = 8
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
