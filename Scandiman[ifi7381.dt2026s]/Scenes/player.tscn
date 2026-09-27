@@ -64,3 +64,6 @@ autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1886780532]
 shape = SubResource("CircleShape2D_32ndw")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=591213515]
+zoom = Vector2(6, 6)
