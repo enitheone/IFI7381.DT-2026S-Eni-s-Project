@@ -398,7 +398,7 @@ position = Vector2(0, -115)
 position = Vector2(0, -149)
 
 [node name="Flame B" parent="." unique_id=1757104027 instance=ExtResource("6_i6g32")]
-position = Vector2(0, -94)
+position = Vector2(-79, -41)
 
 [node name="Flame C" parent="." unique_id=128882338 instance=ExtResource("6_i6g32")]
 position = Vector2(132, -193)
@@ -425,3 +425,23 @@ shape = SubResource("WorldBoundaryShape2D_32ndw")
 
 [node name="Ghost" parent="." unique_id=1078412206 instance=ExtResource("9_h4fw4")]
 position = Vector2(-28, 11)
+
+[node name="Text Labels" type="Node" parent="." unique_id=1972152406]
+
+[node name="Label" type="Label" parent="." unique_id=1185145673]
+offset_left = 84.0
+offset_top = -15.0
+offset_right = 262.0
+offset_bottom = 37.0
+theme_override_font_sizes/font_size = 8
+text = "Roll the wheel
+to jump."
+
+[node name="Label2" type="Label" parent="." unique_id=1953838305]
+offset_left = -58.0
+offset_top = -30.0
+offset_right = 43.0
+offset_bottom = 1.0
+theme_override_font_sizes/font_size = 8
+text = "Touch blue flames 3 times
+to make them disappear."
