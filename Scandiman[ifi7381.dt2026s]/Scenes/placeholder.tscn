@@ -1,6 +1,16 @@
 [gd_scene format=3 uid="uid://b01sre3a3vvvc"]
 
-[ext_resource type="Script" uid="uid://bjk856nc85085" path="res://Scripts/placeholder.gd" id="1_l6lyr"]
+[ext_resource type="Texture2D" uid="uid://ckdiibkxmowj4" path="res://icon.svg" id="1_l6lyr"]
 
-[node name="Node2D" type="Node2D" unique_id=1030502412]
-script = ExtResource("1_l6lyr")
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_q14eo"]
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=252019467]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=521993142]
+position = Vector2(0, 15)
+shape = SubResource("WorldBoundaryShape2D_q14eo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1701196453]
+position = Vector2(-0.4999981, 36)
+scale = Vector2(1.4921875, 0.28125003)
+texture = ExtResource("1_l6lyr")
