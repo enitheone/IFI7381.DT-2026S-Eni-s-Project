@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://budfuwuohifvh"]
 
 [ext_resource type="PackedScene" uid="uid://dejjgn1mh2uuc" path="res://Scenes/player.tscn" id="2_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://5ujt1q5eopod" path="res://Scenes/wnb_platform_standing.tscn" id="3_3dryh"]
 [ext_resource type="Texture2D" uid="uid://b85xr5thi7qhh" path="res://Assets/Graphics/dungeon_tiles_eniEdit.png" id="3_wrm1d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3dryh"]
@@ -331,3 +332,6 @@ tile_map_data = PackedByteArray("AAD6/wEAAAAAAAUAAAD7/wEAAAABAAUAAAD8/wEAAAACAAU
 tile_set = SubResource("TileSet_cex7n")
 
 [node name="Player" parent="." unique_id=505526369 instance=ExtResource("2_wrm1d")]
+
+[node name="WnbPlatform_Standing" parent="." unique_id=1430652400 instance=ExtResource("3_3dryh")]
+position = Vector2(47, -11)
