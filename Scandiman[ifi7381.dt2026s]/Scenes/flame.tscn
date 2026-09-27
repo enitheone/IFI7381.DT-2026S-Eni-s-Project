@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b05ct4x08qxeq"]
+
+[ext_resource type="Texture2D" uid="uid://eh3myq52o6kl" path="res://Assets/Graphics/Ghosty_Anim.png" id="1_o8fj5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odbei"]
+atlas = ExtResource("1_o8fj5")
+region = Rect2(60, 32, 12, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsjlv"]
+atlas = ExtResource("1_o8fj5")
+region = Rect2(84, 32, 12, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_32ndw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odbei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsjlv")
+}],
+"loop": 2,
+"name": &"idle",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_32ndw"]
+radius = 4.0
+
+[node name="Flame" type="Area2D" unique_id=966235561]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1837451006]
+sprite_frames = SubResource("SpriteFrames_32ndw")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.92776275
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=494699044]
+shape = SubResource("CircleShape2D_32ndw")
