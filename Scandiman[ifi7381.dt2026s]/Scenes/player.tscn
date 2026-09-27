@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dejjgn1mh2uuc"]
 
+[ext_resource type="Script" uid="uid://dvqs6p53oady1" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://eh3myq52o6kl" path="res://Assets/Graphics/Ghosty_Anim.png" id="1_v0iea"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
@@ -56,6 +57,7 @@ animations = [{
 radius = 6.0
 
 [node name="Player" type="CharacterBody2D" unique_id=505526369]
+script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=747090029]
 sprite_frames = SubResource("SpriteFrames_y1hqu")

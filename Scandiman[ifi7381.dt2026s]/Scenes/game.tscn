@@ -2,9 +2,23 @@
 
 [ext_resource type="PackedScene" uid="uid://b01sre3a3vvvc" path="res://Scenes/placeholder.tscn" id="1_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://dejjgn1mh2uuc" path="res://Scenes/player.tscn" id="2_wrm1d"]
+[ext_resource type="Texture2D" uid="uid://ckdiibkxmowj4" path="res://icon.svg" id="3_wrm1d"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y1hqu"]
 
 [node name="Game" type="Node2D" unique_id=1904866137]
 
 [node name="Node2D" parent="." unique_id=1030502412 instance=ExtResource("1_qxrlw")]
 
 [node name="Player" parent="." unique_id=505526369 instance=ExtResource("2_wrm1d")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=666347221]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2103525282]
+position = Vector2(0, 15)
+shape = SubResource("WorldBoundaryShape2D_y1hqu")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=427425119]
+position = Vector2(-0.4999981, 36)
+scale = Vector2(1.4921875, 0.28125003)
+texture = ExtResource("3_wrm1d")
