@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://m40ay68og3aw"
+path="res://.godot/imported/Memoraphile - Spooky Dungeon.ogg-d27477b464904eb02fbcea3d7b73b0bc.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memoraphile - Spooky Dungeon.ogg"
+dest_files=["res://.godot/imported/Memoraphile - Spooky Dungeon.ogg-d27477b464904eb02fbcea3d7b73b0bc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
