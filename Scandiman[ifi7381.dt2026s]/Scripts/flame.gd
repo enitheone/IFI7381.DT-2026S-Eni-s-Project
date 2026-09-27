@@ -10,3 +10,8 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	touched += 1
 	print("The ", name, " has been touched ", touched, " time(s).")
+	scale.x -= 0.2
+	scale.y -= 0.2
+	if touched >= 5:
+		print("The ", name, " has been touched too much.")
+		queue_free()
