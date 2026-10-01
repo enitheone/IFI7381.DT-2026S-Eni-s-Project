@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://cyikghi8svsop"]
+
+[ext_resource type="Script" uid="uid://cdsqs51g3h33u" path="res://Scripts/game_manager.gd" id="1_ldgsr"]
+[ext_resource type="PackedScene" path="res://Scenes/tilemap_dungeon.tscn" id="2_h4fw4"]
+[ext_resource type="PackedScene" uid="uid://b1g87u3jipj61" path="res://Scenes/player.tscn" id="2_wrm1d"]
+[ext_resource type="PackedScene" path="res://Scenes/wnb_platform_standing.tscn" id="3_3dryh"]
+[ext_resource type="PackedScene" path="res://Scenes/wnb_platform_movingX.tscn" id="4_3dryh"]
+[ext_resource type="PackedScene" path="res://Scenes/wnb_platform_movingY.tscn" id="5_wowpa"]
+[ext_resource type="PackedScene" uid="uid://cgnv82rbxddeo" path="res://Scenes/flame.tscn" id="6_i6g32"]
+[ext_resource type="PackedScene" uid="uid://ryu4i5kab10f" path="res://Scenes/killzone.tscn" id="7_1l0tm"]
+[ext_resource type="PackedScene" uid="uid://xbpbydd0kh2i" path="res://Scenes/ghost.tscn" id="9_h4fw4"]
+
+[sub_resource type="Animation" id="Animation_wowpa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(90, -89)]
+}
+
+[sub_resource type="Animation" id="Animation_i6g32"]
+resource_name = "move"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(149, -89), Vector2(-90, -89)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1l0tm"]
+_data = {
+&"RESET": SubResource("Animation_wowpa"),
+&"move": SubResource("Animation_i6g32")
+}
+
+[sub_resource type="Animation" id="Animation_1l0tm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(167, -59)]
+}
+
+[sub_resource type="Animation" id="Animation_v158k"]
+resource_name = "move"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(167, -59), Vector2(167, -159)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h4fw4"]
+_data = {
+&"RESET": SubResource("Animation_1l0tm"),
+&"move": SubResource("Animation_v158k")
+}
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_32ndw"]
+
+[node name="Game" type="Node2D" unique_id=1904866137]
+
+[node name="GameManager" type="Node" parent="." unique_id=1288010401]
+unique_name_in_owner = true
+script = ExtResource("1_ldgsr")
+
+[node name="FlameLabel" type="Label" parent="GameManager" unique_id=1172232433]
+offset_left = 4.0
+offset_top = -77.0
+offset_right = 105.0
+offset_bottom = -46.0
+theme_override_font_sizes/font_size = 8
+text = "Blue Flames remaining:
+X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TileMap_D" parent="." unique_id=804537091 instance=ExtResource("2_h4fw4")]
+
+[node name="Platforms" type="Node" parent="." unique_id=539247493]
+
+[node name="WnbPlatform_Standing" parent="Platforms" unique_id=1430652400 instance=ExtResource("3_3dryh")]
+position = Vector2(0, -115)
+
+[node name="WnbPlatform_MovingX" parent="Platforms" unique_id=801479556 instance=ExtResource("4_3dryh")]
+position = Vector2(90, -89)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/WnbPlatform_MovingX" unique_id=891834840]
+libraries/ = SubResource("AnimationLibrary_1l0tm")
+autoplay = &"move"
+
+[node name="WnbPlatform_MovingY" parent="Platforms" unique_id=1704355113 instance=ExtResource("5_wowpa")]
+position = Vector2(167, -59)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/WnbPlatform_MovingY" unique_id=1501278954]
+libraries/ = SubResource("AnimationLibrary_h4fw4")
+autoplay = &"move"
+
+[node name="Flames" type="Node" parent="." unique_id=1742616360]
+
+[node name="Flame A" parent="Flames" unique_id=966235561 instance=ExtResource("6_i6g32")]
+position = Vector2(0, -149)
+
+[node name="Flame B" parent="Flames" unique_id=1757104027 instance=ExtResource("6_i6g32")]
+position = Vector2(-79, -41)
+
+[node name="Flame C" parent="Flames" unique_id=128882338 instance=ExtResource("6_i6g32")]
+position = Vector2(209, -194)
+
+[node name="Player" parent="." unique_id=505526369 instance=ExtResource("2_wrm1d")]
+position = Vector2(100, -24)
+
+[node name="Killzone" parent="." unique_id=478291207 instance=ExtResource("7_1l0tm")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1425330210]
+position = Vector2(-101, 55)
+shape = SubResource("WorldBoundaryShape2D_32ndw")
+
+[node name="Ghost" parent="." unique_id=1078412206 instance=ExtResource("9_h4fw4")]
+position = Vector2(-28, 11)
+
+[node name="Text Labels" type="Node" parent="." unique_id=1972152406]
+
+[node name="Label" type="Label" parent="Text Labels" unique_id=1185145673]
+offset_left = 84.0
+offset_top = -15.0
+offset_right = 262.0
+offset_bottom = 37.0
+theme_override_font_sizes/font_size = 8
+text = "Roll the wheel
+to jump."
+
+[node name="Label2" type="Label" parent="Text Labels" unique_id=1953838305]
+offset_left = -58.0
+offset_top = -30.0
+offset_right = 43.0
+offset_bottom = 1.0
+theme_override_font_sizes/font_size = 8
+text = "Touch blue flames 3 times
+to make them disappear."

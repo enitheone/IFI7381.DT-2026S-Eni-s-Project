@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://csi2vqv083o13"]
+
+[ext_resource type="Texture2D" uid="uid://ckdiibkxmowj4" path="res://icon.svg" id="1_l6lyr"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_q14eo"]
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=252019467]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=521993142]
+position = Vector2(0, 15)
+shape = SubResource("WorldBoundaryShape2D_q14eo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1701196453]
+position = Vector2(-0.4999981, 36)
+scale = Vector2(1.4921875, 0.28125003)
+texture = ExtResource("1_l6lyr")
