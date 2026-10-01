@@ -1,0 +1,15 @@
+ENI Note:
+RPG 'Mansion' Tile Set (NES) tilemap was downloaded from https://opengameart.org/content/dungeon-tileset
+It was readjusted to match 16x16 tile size.
+
+Author: 
+Chasersgaming
+Thursday, November 8, 2018 - 03:38
+Support Chasersgaming on Patreon
+Art Type: 
+2D Art
+Tags: 
+HalloweenmansionhouseNEStileset8x8
+License(s): 
+
+CC0
