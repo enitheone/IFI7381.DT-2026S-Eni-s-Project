@@ -1,5 +1,5 @@
 ENI Note:
-RPG 'Mansion' Tile Set (NES) tilemap was downloaded from https://opengameart.org/content/dungeon-tileset
+RPG 'Mansion' Tile Set (NES) tilemap was downloaded from https://opengameart.org/content/rpg-mansion-tile-set-nes
 It was readjusted to match 16x16 tile size.
 
 Author: 

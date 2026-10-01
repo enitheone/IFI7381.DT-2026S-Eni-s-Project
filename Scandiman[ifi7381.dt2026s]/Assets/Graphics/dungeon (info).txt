@@ -6,3 +6,8 @@ Buch
 Wednesday, January 29, 2014 - 10:21
 Art Type: 
 2D Art
+Tags: 
+dungeontilesetPixel Art16x16mageknightdwarfcaveboxchest
+License(s): 
+
+CC0
