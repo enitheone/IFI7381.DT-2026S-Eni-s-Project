@@ -18,6 +18,14 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.flip_h = false
 	elif dir_x < 0:
 		animated_sprite.flip_h = true
+	if dir_y > 0:
+		animated_sprite.flip_h = false
+		animated_sprite.rotation_degrees = 90.0
+	elif dir_y < 0:
+		animated_sprite.flip_h = false
+		animated_sprite.rotation_degrees = -90.0
+	else:
+		animated_sprite.rotation_degrees = 0
 	
 	#Pacman has no animations, so rotate the sprite where it makes sense?
 	
