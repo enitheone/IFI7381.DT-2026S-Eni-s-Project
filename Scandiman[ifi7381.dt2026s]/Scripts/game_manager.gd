@@ -5,7 +5,7 @@ extends Node
 var flames_out: int = 3
 
 func _ready() -> void:
-	flame_label.text = "Blue Flames remaining: " + str(flames_out)
+	pass
 
 func add_flames_out():
 	flames_out -= 1
