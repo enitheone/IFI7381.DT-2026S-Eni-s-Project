@@ -24,9 +24,11 @@ func _physics_process(delta: float) -> void:
 	#..apply movement.
 	if dir_x:
 		velocity.x = dir_x * SPEED
+		velocity.y = move_toward(velocity.y, 0, SPEED)
 		animated_sprite.play("move")
 	elif dir_y:
 		velocity.y = dir_y * SPEED
+		velocity.x = move_toward(velocity.x, 0, SPEED)
 		animated_sprite.play("move")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
