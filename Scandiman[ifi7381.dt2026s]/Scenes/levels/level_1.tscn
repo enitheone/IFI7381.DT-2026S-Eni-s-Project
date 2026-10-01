@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://07nh3sljslcp"]
+
+[ext_resource type="Script" uid="uid://cdsqs51g3h33u" path="res://Scripts/game_manager.gd" id="1_mkwgf"]
+
+[node name="Level1" type="Node2D" unique_id=1222429112]
+
+[node name="GameManager" type="Node" parent="." unique_id=1802136064]
+unique_name_in_owner = true
+script = ExtResource("1_mkwgf")
