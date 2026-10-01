@@ -318,7 +318,7 @@ texture = ExtResource("3_wrm1d")
 
 [sub_resource type="TileSet" id="TileSet_32ndw"]
 uv_clipping = true
-physics_layer_0/collision_layer = 3
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_h4fw4")
 sources/1 = SubResource("TileSetAtlasSource_ldgsr")
 sources/2 = SubResource("TileSetAtlasSource_o5yvi")
