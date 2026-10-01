@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cdsqs51g3h33u" path="res://Scripts/game_manager.gd" id="1_mkwgf"]
 [ext_resource type="PackedScene" uid="uid://ccvm8mw15vv4e" path="res://Scenes/other/tilemap_mansion.tscn" id="3_0lml3"]
+[ext_resource type="PackedScene" uid="uid://b62uidck340qg" path="res://Scenes/objects/ghost_blue.tscn" id="4_cru1l"]
 [ext_resource type="PackedScene" uid="uid://dejjgn1mh2uuc" path="res://Scenes/objects/player.tscn" id="4_qyddi"]
 
 [node name="Level1" type="Node2D" unique_id=1222429112]
@@ -15,3 +16,6 @@ tile_map_data = PackedByteArray("AAD+////AAAOAAcAAAD+/wAAAAAOAAkAAAD+/wEAAAAOAAk
 
 [node name="Player" parent="." unique_id=505526369 instance=ExtResource("4_qyddi")]
 position = Vector2(60, 159)
+
+[node name="Ghost_blue" parent="." unique_id=1078412206 instance=ExtResource("4_cru1l")]
+position = Vector2(105, 95)

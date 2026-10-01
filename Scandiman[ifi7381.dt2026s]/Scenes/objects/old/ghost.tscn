@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://b14m6u2ijp2di"]
+
+[ext_resource type="Script" uid="uid://b3e0gthg1avyf" path="res://Scripts/ghost.gd" id="1_108wt"]
+[ext_resource type="Texture2D" uid="uid://eh3myq52o6kl" path="res://Assets/Graphics/Ghosty_Anim.png" id="1_e3r4w"]
+[ext_resource type="PackedScene" uid="uid://y1aen1aa2kqe" path="res://Scenes/killzone.tscn" id="2_108wt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3btnm"]
+atlas = ExtResource("1_e3r4w")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_taxxh"]
+atlas = ExtResource("1_e3r4w")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thbej"]
+atlas = ExtResource("1_e3r4w")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uta0k"]
+atlas = ExtResource("1_e3r4w")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_32ndw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3btnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_taxxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thbej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uta0k")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_32ndw"]
+size = Vector2(10, 16)
+
+[node name="Ghost" type="Node2D" unique_id=1078412206]
+script = ExtResource("1_108wt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1386794569]
+sprite_frames = SubResource("SpriteFrames_32ndw")
+animation = &"idle"
+autoplay = "idle"
+frame = 2
+frame_progress = 0.94938016
+
+[node name="Killzone" parent="." unique_id=478291207 instance=ExtResource("2_108wt")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=326382114]
+shape = SubResource("RectangleShape2D_32ndw")
+
+[node name="RayCast" type="RayCast2D" parent="." unique_id=1118062915]
+target_position = Vector2(10, 0)
