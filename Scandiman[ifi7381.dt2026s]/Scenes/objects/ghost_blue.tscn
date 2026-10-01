@@ -189,7 +189,9 @@ autoplay = "idle"
 shape = SubResource("RectangleShape2D_32ndw")
 
 [node name="RayCast_X" type="RayCast2D" parent="." unique_id=1118062915]
-target_position = Vector2(10, 0)
+target_position = Vector2(8, 0)
+hit_from_inside = true
 
 [node name="RayCast_Y" type="RayCast2D" parent="." unique_id=1773729821]
-target_position = Vector2(0, 10)
+target_position = Vector2(0, -8)
+hit_from_inside = true

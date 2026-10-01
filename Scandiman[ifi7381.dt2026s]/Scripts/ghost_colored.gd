@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 		ray_cast_y.enabled = true
 		ray_cast_x.enabled = false
 	if ray_cast_y.is_colliding():
-		dir[0] = dir[1] * -1
+		dir[0] = dir[1]
 		dir[1] = 0
 		ray_cast_x.target_position.x = dir[0]
 		ray_cast_x.enabled = true

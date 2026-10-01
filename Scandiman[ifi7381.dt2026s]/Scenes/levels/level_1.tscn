@@ -18,4 +18,4 @@ tile_map_data = PackedByteArray("AAD+////AAAOAAcAAAD+/wAAAAAOAAkAAAD+/wEAAAAOAAk
 position = Vector2(60, 159)
 
 [node name="Ghost_blue" parent="." unique_id=1078412206 instance=ExtResource("4_cru1l")]
-position = Vector2(105, 95)
+position = Vector2(25, 136)
