@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://budfuwuohifvh"]
 
 [ext_resource type="Script" uid="uid://cdsqs51g3h33u" path="res://Scripts/game_manager.gd" id="1_ldgsr"]
-[ext_resource type="PackedScene" uid="uid://cmrl4l8f3pouj" path="res://Scenes/tilemap_dungeon.tscn" id="2_h4fw4"]
-[ext_resource type="PackedScene" uid="uid://dejjgn1mh2uuc" path="res://Scenes/player.tscn" id="2_wrm1d"]
-[ext_resource type="PackedScene" uid="uid://5ujt1q5eopod" path="res://Scenes/wnb_platform_standing.tscn" id="3_3dryh"]
-[ext_resource type="PackedScene" uid="uid://5fifwoh6rwrj" path="res://Scenes/wnb_platform_movingX.tscn" id="4_3dryh"]
-[ext_resource type="PackedScene" uid="uid://bqte6oyf1nx4w" path="res://Scenes/wnb_platform_movingY.tscn" id="5_wowpa"]
-[ext_resource type="PackedScene" uid="uid://b05ct4x08qxeq" path="res://Scenes/flame.tscn" id="6_i6g32"]
-[ext_resource type="PackedScene" uid="uid://y1aen1aa2kqe" path="res://Scenes/killzone.tscn" id="7_1l0tm"]
-[ext_resource type="PackedScene" uid="uid://ci0wih611v3ef" path="res://Scenes/ghost.tscn" id="9_h4fw4"]
+[ext_resource type="PackedScene" uid="uid://cmrl4l8f3pouj" path="res://Scenes/other/tilemap_dungeon.tscn" id="2_h4fw4"]
+[ext_resource type="PackedScene" uid="uid://dejjgn1mh2uuc" path="res://Scenes/objects/player.tscn" id="2_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://5ujt1q5eopod" path="res://Scenes/other/wnb_platform_standing.tscn" id="3_3dryh"]
+[ext_resource type="PackedScene" uid="uid://5fifwoh6rwrj" path="res://Scenes/other/wnb_platform_movingX.tscn" id="4_3dryh"]
+[ext_resource type="PackedScene" uid="uid://bqte6oyf1nx4w" path="res://Scenes/other/wnb_platform_movingY.tscn" id="5_wowpa"]
+[ext_resource type="PackedScene" uid="uid://b05ct4x08qxeq" path="res://Scenes/objects/flame.tscn" id="6_i6g32"]
+[ext_resource type="PackedScene" uid="uid://y1aen1aa2kqe" path="res://Scenes/objects/killzone.tscn" id="7_1l0tm"]
+[ext_resource type="PackedScene" uid="uid://ci0wih611v3ef" path="res://Scenes/objects/ghost.tscn" id="9_h4fw4"]
 
 [sub_resource type="Animation" id="Animation_wowpa"]
 length = 0.001
