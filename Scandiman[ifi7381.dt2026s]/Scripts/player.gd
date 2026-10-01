@@ -9,7 +9,7 @@ func _physics_process(delta: float) -> void:
 	# Tutorial got to this point. 
 	# Input.get_axis apparently returns -1 (left), 0 (no input) or 1 (right.
 	var dir_x := Input.get_axis("move_left", "move_right")
-	var dir_y := Input.get_axis("move_down", "move_up")
+	var dir_y := Input.get_axis("move_up", "move_down")
 	
 	#Tutorial put the sprite flipping here.
 	# ENI Note: else if and else did not work originally.
