@@ -5,7 +5,7 @@ extends Node
 #var flames_out: int = 3
 
 func _ready() -> void:
-	pass
+	MusicPlayer.get_stream_playback().switch_to_clip(1)
 
 #func add_flames_out():
 #	flames_out -= 1
