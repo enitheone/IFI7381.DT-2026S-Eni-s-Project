@@ -6,7 +6,7 @@ var test_array: = ["name 1","name 2","name 3", "name 4", "name 5"]
 func print_array(array = []):
 	print("Printing the array")
 	for i in array.size():
-		print(array[i])
+		print("ID: ", i, "|| Element: ", array[i])
 
 #3) Write a function that takes in an array as an argument and swaps the fist value with the last one.
 func swap_items(array = [], id_1 = 0, id_2 = array.size()-1):
