@@ -1,8 +1,16 @@
 [gd_scene format=3 uid="uid://dol7wjq64lfka"]
 
+[ext_resource type="AudioStream" uid="uid://t1q4a8r5w6b4" path="res://Assets/Sounds/TownTheme.mp3" id="1_8ybl4"]
 [ext_resource type="AudioStream" uid="uid://m40ay68og3aw" path="res://Assets/Sounds/Memoraphile - Spooky Dungeon.ogg" id="1_fbmny"]
+[ext_resource type="AudioStream" uid="uid://uxsmxdbm4kqf" path="res://Assets/Sounds/bit_forrest_end.ogg" id="2_2aiwe"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_y1hqu"]
+stream_count = 3
+stream_0 = ExtResource("1_8ybl4")
+stream_1 = ExtResource("2_2aiwe")
+stream_2 = ExtResource("1_fbmny")
 
 [node name="Music" type="AudioStreamPlayer2D" unique_id=288224193]
-stream = ExtResource("1_fbmny")
+stream = SubResource("AudioStreamPlaylist_y1hqu")
 autoplay = true
 bus = &"Music"
