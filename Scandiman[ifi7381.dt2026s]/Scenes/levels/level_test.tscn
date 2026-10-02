@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b62uidck340qg" path="res://Scenes/objects/ghost_blue.tscn" id="4_cru1l"]
 [ext_resource type="PackedScene" uid="uid://dejjgn1mh2uuc" path="res://Scenes/objects/player.tscn" id="4_qyddi"]
 
-[node name="Level1" type="Node2D" unique_id=1222429112]
+[node name="LevelTest" type="Node2D" unique_id=1222429112]
 
 [node name="GameManager" type="Node" parent="." unique_id=1802136064]
 unique_name_in_owner = true
