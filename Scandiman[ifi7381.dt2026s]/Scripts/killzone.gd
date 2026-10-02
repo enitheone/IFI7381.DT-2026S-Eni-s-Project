@@ -6,9 +6,10 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:
 	print("The player died!")
 	Engine.time_scale = 0.5
-	body.get_node("AnimatedSprite2D").play("dead")
+	body.get_node("AnimationPlayer").play("dead")
 	hups.play()
 	body.get_node("CollisionShape2D").queue_free()
+	timer.wait_time = 0.67
 	timer.start()
 	
 
