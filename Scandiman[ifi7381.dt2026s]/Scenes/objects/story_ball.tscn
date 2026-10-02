@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cc8ohpakwotql"]
+
+[ext_resource type="Texture2D" uid="uid://bvlvae058nqau" path="res://Assets/Graphics/Ghosty_Anim_SmallONLY.png" id="1_7lvtt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5awh"]
+atlas = ExtResource("1_7lvtt")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8ykg"]
+atlas = ExtResource("1_7lvtt")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqnpj"]
+atlas = ExtResource("1_7lvtt")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmjkk"]
+atlas = ExtResource("1_7lvtt")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_32ndw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5awh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8ykg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqnpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmjkk")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_32ndw"]
+radius = 6.0
+
+[node name="StoryBall" type="Area2D" unique_id=590934876]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1478689642]
+sprite_frames = SubResource("SpriteFrames_32ndw")
+autoplay = "default"
+frame_progress = 0.5932106
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2008960576]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_32ndw")
