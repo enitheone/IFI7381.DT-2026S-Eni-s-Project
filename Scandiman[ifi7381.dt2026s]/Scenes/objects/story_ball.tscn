@@ -59,10 +59,11 @@ shape = SubResource("CircleShape2D_32ndw")
 [node name="StoryLabel" type="Label" parent="." unique_id=104131923]
 z_index = 7
 texture_filter = 3
-custom_maximum_size = Vector2(128, 24)
+custom_maximum_size = Vector2(128, 32)
 offset_left = -64.0
-offset_top = -24.0
+offset_top = -32.0
 offset_right = 64.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9411765)
 theme_override_fonts/font = ExtResource("3_r8ykg")
 theme_override_font_sizes/font_size = 8
 text = "Insert text here."
