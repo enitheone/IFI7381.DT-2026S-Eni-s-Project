@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ccvm8mw15vv4e" path="res://Scenes/other/tilemap_mansion.tscn" id="3_0lml3"]
 [ext_resource type="PackedScene" uid="uid://b62uidck340qg" path="res://Scenes/objects/ghost_blue.tscn" id="4_cru1l"]
 [ext_resource type="PackedScene" uid="uid://dejjgn1mh2uuc" path="res://Scenes/objects/player.tscn" id="4_qyddi"]
+[ext_resource type="PackedScene" uid="uid://cc8ohpakwotql" path="res://Scenes/objects/story_ball.tscn" id="5_a8w1j"]
 
 [node name="LevelTest" type="Node2D" unique_id=1222429112]
 
@@ -19,3 +20,6 @@ position = Vector2(60, 159)
 
 [node name="Ghost_blue" parent="." unique_id=1078412206 instance=ExtResource("4_cru1l")]
 position = Vector2(-1, 159)
+
+[node name="StoryBall" parent="." unique_id=590934876 instance=ExtResource("5_a8w1j")]
+position = Vector2(57, 76)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cc8ohpakwotql"]
 
 [ext_resource type="Texture2D" uid="uid://bvlvae058nqau" path="res://Assets/Graphics/Ghosty_Anim_SmallONLY.png" id="1_7lvtt"]
+[ext_resource type="Script" uid="uid://cm4vgeoml7swh" path="res://Scripts/story_ball.gd" id="1_r5awh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r5awh"]
 atlas = ExtResource("1_7lvtt")
@@ -42,6 +43,8 @@ animations = [{
 radius = 6.0
 
 [node name="StoryBall" type="Area2D" unique_id=590934876]
+collision_mask = 2
+script = ExtResource("1_r5awh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1478689642]
 sprite_frames = SubResource("SpriteFrames_32ndw")
@@ -51,3 +54,16 @@ frame_progress = 0.5932106
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2008960576]
 position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_32ndw")
+
+[node name="StoryLabel" type="Label" parent="." unique_id=104131923]
+offset_left = -31.0
+offset_top = -27.0
+offset_right = 32.0
+offset_bottom = -4.0
+theme_override_font_sizes/font_size = 8
+text = "Insert text here."
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
