@@ -34,6 +34,10 @@ MusicPlayer="*uid://dol7wjq64lfka"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[gui]
+
+fonts/dynamic_fonts/use_oversampling=false
+
 [input]
 
 move_left={

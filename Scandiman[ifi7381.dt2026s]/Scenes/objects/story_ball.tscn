@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bvlvae058nqau" path="res://Assets/Graphics/Ghosty_Anim_SmallONLY.png" id="1_7lvtt"]
 [ext_resource type="Script" uid="uid://cm4vgeoml7swh" path="res://Scripts/story_ball.gd" id="1_r5awh"]
+[ext_resource type="FontFile" uid="uid://dn42j3hcgowv3" path="res://Assets/Graphics/Fonts/monostilus.ttf" id="3_r8ykg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r5awh"]
 atlas = ExtResource("1_7lvtt")
@@ -57,9 +58,11 @@ shape = SubResource("CircleShape2D_32ndw")
 
 [node name="StoryLabel" type="Label" parent="." unique_id=104131923]
 z_index = 7
+texture_filter = 3
 offset_left = -40.0
 offset_top = -24.0
 offset_right = 40.0
+theme_override_fonts/font = ExtResource("3_r8ykg")
 theme_override_font_sizes/font_size = 8
 text = "Insert text here."
 horizontal_alignment = 1
