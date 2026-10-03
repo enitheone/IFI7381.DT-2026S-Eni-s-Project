@@ -63,6 +63,7 @@ offset_bottom = -4.0
 theme_override_font_sizes/font_size = 8
 text = "Insert text here."
 horizontal_alignment = 1
+clip_text = true
 metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
