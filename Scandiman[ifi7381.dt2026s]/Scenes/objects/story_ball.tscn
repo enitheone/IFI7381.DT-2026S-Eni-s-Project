@@ -40,7 +40,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_32ndw"]
-radius = 6.0
+radius = 4.0
 
 [node name="StoryBall" type="Area2D" unique_id=590934876]
 collision_mask = 2
@@ -56,10 +56,10 @@ position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_32ndw")
 
 [node name="StoryLabel" type="Label" parent="." unique_id=104131923]
-offset_left = -31.0
-offset_top = -27.0
-offset_right = 32.0
-offset_bottom = -4.0
+z_index = 7
+offset_left = -40.0
+offset_top = -24.0
+offset_right = 40.0
 theme_override_font_sizes/font_size = 8
 text = "Insert text here."
 horizontal_alignment = 1
