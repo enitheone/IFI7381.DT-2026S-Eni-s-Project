@@ -1,0 +1,22 @@
+Quick change log on the changes that I made from the previous iteration to this (5.10.2026) iteration:
+1. Changed the movement style from platformer to Pacman-esque playstyle
+- The code is not perfect, and it could be seen as "top view 2D controls with awkward ice physics". I was able to break the gravity and add the y-axis, but I was not able to polish the smooth automovement.
+2. Added new tilemap
+- added a mansion based tile map in order to build the story properly
+3. Polished the Ghost script movement
+- polished the Ghost's movement to match the top-view 2D gameplay style. I created a primitive way to change the movement axis after each collision.
+4. Added 2 new music tracks
+5. Changed the control scheme
+- removed the awkward mouse controls and mapped my USB controller. I want to remember that I mapped arrow keys as well, but currently I want to go sleep.
+6. Added a story
+- made a really cheesy story inspired by dad collecting the milk -jokes
+7. Created a story ball object
+- the object shows a text box whenever the player collides with it
+- used to tell the narrative
+8. Created a warp ball object
+- the object loads a new scene whenever the player collides with it
+- used to change a scene
+9. Created 7 level scenes
+- scenes are short and small, mainly focus on world building
+10. Pacman's death animation
+- Used a code to rotate and shrink the player as for the dead animation
