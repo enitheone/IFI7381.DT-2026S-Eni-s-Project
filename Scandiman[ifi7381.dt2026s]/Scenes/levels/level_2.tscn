@@ -40,7 +40,14 @@ story_text = "Down to outside"
 position = Vector2(33, 77)
 story_text = "Down to outside"
 
-[node name="WarpBall" parent="." unique_id=1457615880 instance=ExtResource("5_fh68y")]
+[node name="WarpBalls" type="Node" parent="." unique_id=1074213919]
+
+[node name="WarpBall_1" parent="WarpBalls" unique_id=1457615880 instance=ExtResource("5_fh68y")]
 position = Vector2(14, -25)
 this_scene_id = 2
 next_scene_id = 1
+
+[node name="WarpBall_2" parent="WarpBalls" unique_id=2026941382 instance=ExtResource("5_fh68y")]
+position = Vector2(-39, -24)
+this_scene_id = 2
+next_scene_id = 3

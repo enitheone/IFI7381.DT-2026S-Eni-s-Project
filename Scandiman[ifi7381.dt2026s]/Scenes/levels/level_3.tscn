@@ -1,0 +1,74 @@
+[gd_scene format=4 uid="uid://cbn13nbthqxpq"]
+
+[ext_resource type="Script" uid="uid://cdsqs51g3h33u" path="res://Scripts/game_manager.gd" id="1_1dosi"]
+[ext_resource type="PackedScene" uid="uid://ccvm8mw15vv4e" path="res://Scenes/other/tilemap_mansion.tscn" id="2_x6hu1"]
+[ext_resource type="PackedScene" uid="uid://dejjgn1mh2uuc" path="res://Scenes/objects/player.tscn" id="3_863cj"]
+[ext_resource type="PackedScene" uid="uid://cc8ohpakwotql" path="res://Scenes/objects/story_ball.tscn" id="4_tsnyi"]
+[ext_resource type="PackedScene" uid="uid://vq545grtjpma" path="res://Scenes/objects/warp_ball.tscn" id="5_hip6n"]
+[ext_resource type="Texture2D" uid="uid://eh3myq52o6kl" path="res://Assets/Graphics/Ghosty_Anim.png" id="6_x6hu1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_32ndw"]
+radius = 6.708204
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_863cj"]
+atlas = ExtResource("6_x6hu1")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsnyi"]
+atlas = ExtResource("6_x6hu1")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_32ndw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_863cj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tsnyi")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 6.0
+}]
+
+[node name="Level3" type="Node2D" unique_id=1295986369]
+
+[node name="GameManager" type="Node" parent="." unique_id=1182615835]
+unique_name_in_owner = true
+script = ExtResource("1_1dosi")
+
+[node name="TlleMap (Mansion_Brown)" parent="." unique_id=2120492695 instance=ExtResource("2_x6hu1")]
+tile_map_data = PackedByteArray("AAD7//r/AAAPAA8AAAD7//v/AAAPABAAAAD7//z/AAAPABEAAAD7//3/AAAPABIAAAD8//r/AAAQAA8AAAD8//v/AAAQABAAAAD8//z/AAAQABEAAAD8//3/AAAQABIAAAD9//r/AAARAA8AAAD9//v/AAARABAAAAD9//z/AAARABEAAAD9//3/AAARABIAAAD3//b/AAAQAAsAAAD3//f/AAATAAwAAAD3//j/AAATAA0AAAD4//b/AAASAAsAAAD4//f/AAAVAAwAAAD4//j/AAAVAA0AAAD5//b/AAAOAAkAAAD5//f/AAAOAAkAAAD5//j/AAAOAAkAAAD3//n/AAAOAAoAAAD4//n/AAAOAAoAAAD5//n/AAAOAAoAAAD6//n/AAAOAAoAAAD7//n/AAAOAAoAAAD8//n/AAAOAAoAAAD9//n/AAAOAAoAAAD+//n/AAAaAA0AAAD///n/AAAbAA0AAAAAAPn/AAAOAAoAAAD6//j/AAAOAAkAAAD8//j/AAAOAAkAAAD9//j/AAAOAAkAAAD+//j/AAAaAAwAAAD///j/AAAbAAwAAAAAAPj/AAAOAAkAAAAAAPf/AAAOAAkAAAD///f/AAAbAAsAAAD+//f/AAAaAAsAAAD9//f/AAAOAAkAAAD8//f/AAAOAAkAAAD7//f/AAAOAAkAAAD6//f/AAAOAAkAAAD6//b/AAAOAAkAAAD7//b/AAAOAAkAAAD8//b/AAAOAAkAAAD9//b/AAAOAAkAAAD+//b/AAAaAAoAAAD///b/AAAbAAoAAAAAAPb/AAAOAAkAAAD7//j/AAAOAAkAAAD3//X/AAAOAAgAAAD4//X/AAAOAAgAAAD5//X/AAAOAAgAAAD6//X/AAAOAAgAAAD7//X/AAAOAAgAAAD8//X/AAAOAAgAAAD9//X/AAAOAAgAAAD+//X/AAAOAAgAAAD///X/AAAOAAgAAAAAAPX/AAAOAAgAAAD3//r/AAAUABYAAAD4//r/AAAUABYAAAD5//r/AAAUABYAAAD6//r/AAAUABYAAAD6//v/AAAUABYAAAD6//z/AAAUABYAAAD6//3/AAAUABYAAAD5//3/AAAUABYAAAD4//3/AAAUABYAAAD4//z/AAAUABYAAAD3//z/AAAUABYAAAD3//v/AAAUABYAAAD4//v/AAAUABYAAAD5//z/AAAUABYAAAD5//v/AAAUABYAAAD3//3/AAAUABYAAAD+//r/AAAUABYAAAD///r/AAAUABYAAAD///v/AAAUABYAAAD///z/AAAUABYAAAD///3/AAAUABYAAAD+//3/AAAUABYAAAD+//z/AAAUABYAAAD+//v/AAAUABYAAAAAAPr/AAAUABYAAAAAAPv/AAAUABYAAAAAAPz/AAAUABYAAAAAAP3/AAAUABYAAAD3//7/AAAUABYAAAD3////AAAUABYAAAD3/wAAAAAUABYAAAD4/wAAAAAUABYAAAD5/wAAAAAUABYAAAD6/wAAAAAUABYAAAD7/wAAAAAUABYAAAD8/wAAAAAUABYAAAD9/wAAAAAUABYAAAD+/wAAAAAUABYAAAD//wAAAAAUABYAAAAAAAAAAAAUABYAAAAAAP//AAAUABYAAAAAAP7/AAAUABYAAAD///7/AAAUABYAAAD/////AAAUABYAAAD+////AAAUABYAAAD+//7/AAAUABYAAAD9//7/AAAUABYAAAD8////AAAUABYAAAD7////AAAUABYAAAD7//7/AAAUABYAAAD6//7/AAAUABYAAAD5//7/AAAUABYAAAD4//7/AAAUABYAAAD4////AAAUABYAAAD5////AAAUABYAAAD6////AAAUABYAAAD9////AAAUABYAAAD8//7/AAAUABYAAAABAPb/AAAOAAkAAAABAPf/AAAOAAkAAAABAPj/AAAOAAkAAAABAPn/AAAOAAoAAAABAPr/AAAUABYAAAABAPv/AAAUABYAAAABAPz/AAAUABYAAAABAP3/AAAUABYAAAABAP7/AAAUABYAAAABAP//AAAUABYAAAABAAAAAAAUABYAAAAAAAEAAAAOAAgAAAD//wEAAAAOAAgAAAABAAEAAAAOAAgAAAD+/wEAAAAOAAgAAAD9/wEAAAAOAAgAAAD8/wEAAAAOAAgAAAD7/wEAAAAOAAgAAAD6/wEAAAAOAAgAAAD5/wEAAAAOAAgAAAD4/wEAAAAOAAgAAAD3/wEAAAAOAAgAAAD2/wEAAAAOAAkAAAD2/wAAAAANAAkAAAD2//b/AAANAAkAAAD2//f/AAANAAkAAAD2//j/AAANAAkAAAD2//n/AAANAAkAAAD2//r/AAANAAkAAAD2//v/AAANAAkAAAD2//z/AAANAAkAAAD2//3/AAANAAkAAAD2//7/AAANAAkAAAD2////AAANAAkAAAD2//X/AAANAAgAAAABAPX/AAAOAAgAAAACAPX/AAAPAAgAAAACAPb/AAAPAAkAAAACAPf/AAAPAAkAAAACAPj/AAAPAAkAAAACAPn/AAAPAAkAAAACAPr/AAAPAAkAAAACAPv/AAAPAAkAAAACAPz/AAAPAAkAAAACAP3/AAAPAAkAAAACAP7/AAAPAAkAAAACAP//AAAPAAkAAAACAAAAAAAPAAkAAAACAAEAAAAOAAkAAAA=")
+
+[node name="Player" parent="." unique_id=505526369 instance=ExtResource("3_863cj")]
+position = Vector2(8, -41)
+
+[node name="StoryBalls" type="Node" parent="." unique_id=1709297772]
+
+[node name="StoryBall_1" parent="StoryBalls" unique_id=590934876 instance=ExtResource("4_tsnyi")]
+position = Vector2(-27, -6)
+story_text = "Go and get that milk for your son."
+
+[node name="StoryBall_2" parent="StoryBalls" unique_id=342500421 instance=ExtResource("4_tsnyi")]
+position = Vector2(-64, -46)
+story_text = "Lots of pictures with my wife and son."
+
+[node name="WarpBall" parent="." unique_id=1457615880 instance=ExtResource("5_hip6n")]
+position = Vector2(-8, -57)
+this_scene_id = 3
+next_scene_id = 2
+
+[node name="WifeMan" type="CharacterBody2D" parent="." unique_id=1244573477]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WifeMan" unique_id=1301743651]
+position = Vector2(-29, -17)
+shape = SubResource("CircleShape2D_32ndw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="WifeMan" unique_id=865754672]
+modulate = Color(0.96250576, 0.0007974303, 0.9687349, 1)
+position = Vector2(-29, -17)
+sprite_frames = SubResource("SpriteFrames_32ndw")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.8905946
