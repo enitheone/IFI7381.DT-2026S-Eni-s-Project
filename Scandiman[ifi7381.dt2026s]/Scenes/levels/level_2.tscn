@@ -51,3 +51,8 @@ next_scene_id = 1
 position = Vector2(-39, -24)
 this_scene_id = 2
 next_scene_id = 3
+
+[node name="WarpBall_3" parent="WarpBalls" unique_id=2024319867 instance=ExtResource("5_fh68y")]
+position = Vector2(64, -24)
+this_scene_id = 2
+next_scene_id = 4
