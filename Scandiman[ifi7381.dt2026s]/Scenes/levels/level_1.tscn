@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ccvm8mw15vv4e" path="res://Scenes/other/tilemap_mansion.tscn" id="2_cru1l"]
 [ext_resource type="PackedScene" uid="uid://dejjgn1mh2uuc" path="res://Scenes/objects/player.tscn" id="3_0lml3"]
 [ext_resource type="PackedScene" uid="uid://cc8ohpakwotql" path="res://Scenes/objects/story_ball.tscn" id="4_cru1l"]
+[ext_resource type="PackedScene" uid="uid://vq545grtjpma" path="res://Scenes/objects/warp_ball.tscn" id="5_0lml3"]
 
 [node name="Level1" type="Node2D" unique_id=1295986369]
 
@@ -30,3 +31,8 @@ story_text = "All flushed, no evidence."
 [node name="StoryBall_3" parent="StoryBalls" unique_id=1889475543 instance=ExtResource("4_cru1l")]
 position = Vector2(24, -15)
 story_text = "Never start with the man in the mirror."
+
+[node name="WarpBall" parent="." unique_id=1457615880 instance=ExtResource("5_0lml3")]
+position = Vector2(49, -25)
+this_scene_id = 1
+next_scene_id = 2
