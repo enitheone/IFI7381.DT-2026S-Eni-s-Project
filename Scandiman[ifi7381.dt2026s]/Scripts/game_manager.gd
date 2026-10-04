@@ -2,10 +2,10 @@ extends Node
 
 #@onready var flame_label: Label = $FlameLabel
 
-#var flames_out: int = 3
+@export var song_id: int = 0
 
 func _ready() -> void:
-	MusicPlayer.get_stream_playback().switch_to_clip(0)
+	MusicPlayer.get_stream_playback().switch_to_clip(song_id)
 
 func _input(event):
 	if event.is_action_released("kill_app"):
