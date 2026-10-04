@@ -43,5 +43,5 @@ story_text = "Maybe that road takes me back home."
 
 [node name="WarpBall" parent="." unique_id=1457615880 instance=ExtResource("5_w5vkw")]
 position = Vector2(98, -82)
-this_scene_id = 5
-next_scene_id = 2
+this_scene_id = 6
+next_scene_id = 7
