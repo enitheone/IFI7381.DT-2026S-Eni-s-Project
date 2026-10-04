@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 	#Pacman has no animations, so rotate the sprite where it makes sense?
 	
 	#..apply movement.
-	if dir_x && (moving_y == 0 && moving_x == 0):
+	if dir_x:
 		#velocity.x = dir_x * SPEED
 		#velocity.y = move_toward(velocity.y, 0, SPEED)
 		moving_x = dir_x
@@ -49,7 +49,7 @@ func _physics_process(delta: float) -> void:
 			ray_cast_r.enabled = false
 			ray_cast_l.enabled = true
 		#animated_sprite.play("move")
-	elif dir_y && (moving_y == 0 && moving_x == 0):
+	elif dir_y:
 		#velocity.y = dir_y * SPEED
 		#velocity.x = move_toward(velocity.x, 0, SPEED)
 		moving_y = dir_y
