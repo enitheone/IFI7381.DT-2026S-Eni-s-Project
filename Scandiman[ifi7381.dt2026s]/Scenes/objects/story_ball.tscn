@@ -44,6 +44,7 @@ animations = [{
 radius = 4.0
 
 [node name="StoryBall" type="Area2D" unique_id=590934876]
+collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_r5awh")
 

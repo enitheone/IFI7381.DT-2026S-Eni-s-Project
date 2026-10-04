@@ -145,6 +145,7 @@ _data = {
 [node name="Player" type="CharacterBody2D" unique_id=505526369]
 z_index = 5
 collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=747090029]
@@ -162,3 +163,19 @@ position_smoothing_enabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1287243985]
 libraries/ = SubResource("AnimationLibrary_imfct")
+
+[node name="RayCastR" type="RayCast2D" parent="." unique_id=1806066686]
+enabled = false
+target_position = Vector2(8, 0)
+
+[node name="RayCastL" type="RayCast2D" parent="." unique_id=1752957074]
+enabled = false
+target_position = Vector2(-8, 0)
+
+[node name="RayCastU" type="RayCast2D" parent="." unique_id=755134126]
+enabled = false
+target_position = Vector2(0, -8)
+
+[node name="RayCastD" type="RayCast2D" parent="." unique_id=1904552345]
+enabled = false
+target_position = Vector2(0, 8)
