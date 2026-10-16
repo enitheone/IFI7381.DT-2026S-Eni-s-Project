@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dytfvybp1nmya"]
+
+[ext_resource type="Texture2D" uid="uid://d1i25bmk58d2g" path="res://Assets/Graphics/icon_music.png" id="1_h7556"]
+[ext_resource type="Script" uid="uid://bro14qr54hfnh" path="res://music_button.gd" id="2_3k2u6"]
+
+[node name="GameView" type="Control" unique_id=740556808]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MusicButton" type="MenuButton" parent="." unique_id=1518342153]
+layout_mode = 0
+offset_left = 1207.0
+offset_top = 1.0
+offset_right = 1279.0
+offset_bottom = 73.0
+button_pressed = true
+icon = ExtResource("1_h7556")
+script = ExtResource("2_3k2u6")
+
+[connection signal="pressed" from="MusicButton" to="MusicButton" method="_on_pressed"]
