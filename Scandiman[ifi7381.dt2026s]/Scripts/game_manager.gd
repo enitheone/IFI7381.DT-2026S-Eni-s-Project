@@ -3,9 +3,10 @@ extends Node
 #@onready var flame_label: Label = $FlameLabel
 
 @export var song_id: int = 0
-
+@export var scene_name: String = ""
 func _ready() -> void:
 	MusicPlayer.get_stream_playback().switch_to_clip(song_id)
+	Enis_HUD.get_node("SceneName").text = scene_name
 
 func _input(event):
 	if event.is_action_released("kill_app"):

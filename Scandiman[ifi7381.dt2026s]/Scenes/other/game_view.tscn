@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d1i25bmk58d2g" path="res://Assets/Graphics/icon_music.png" id="1_h7556"]
 [ext_resource type="Script" uid="uid://bro14qr54hfnh" path="res://music_button.gd" id="2_3k2u6"]
 [ext_resource type="Texture2D" uid="uid://b5y05vu540wym" path="res://Assets/Graphics/icon_redx.png" id="4_7p0pf"]
+[ext_resource type="FontFile" uid="uid://7onan86q4try" path="res://Assets/Graphics/Fonts/pc-senior.regular.ttf" id="5_pqt7j"]
 
 [node name="GameView" type="Control" unique_id=740556808]
 layout_mode = 3
@@ -30,5 +31,15 @@ script = ExtResource("2_3k2u6")
 visible = false
 position = Vector2(38, 36)
 texture = ExtResource("4_7p0pf")
+
+[node name="SceneName" type="Label" parent="CanvasLayer" unique_id=832381272]
+offset_left = 482.0
+offset_top = 552.0
+offset_right = 802.0
+offset_bottom = 637.0
+theme_override_fonts/font = ExtResource("5_pqt7j")
+text = "Scene Name Here"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="CanvasLayer/MusicButton" to="CanvasLayer/MusicButton" method="_on_pressed"]
