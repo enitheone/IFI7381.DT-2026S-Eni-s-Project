@@ -14,11 +14,11 @@ func update_sceneName(passed_name: String = ""):
 func update_questName(passed_id: int = -1):
 	if (passed_id < 0 || passed_id >= quest_list.size()):
 		return
-	quest_name.text = quest_list[passed_id]
-	ok.visible = quest_statuses[passed_id]
+	quest_name.text = quest_list[passed_id-1]
+	ok.visible = quest_statuses[passed_id-1]
 
 func questDone(passed_id: int = -1):
 	if (passed_id < 0 || passed_id >= quest_list.size()):
 		return
-	quest_statuses[passed_id] = true
-	ok.visible = quest_statuses[passed_id]
+	quest_statuses[passed_id-1] = true
+	ok.visible = quest_statuses[passed_id-1]
