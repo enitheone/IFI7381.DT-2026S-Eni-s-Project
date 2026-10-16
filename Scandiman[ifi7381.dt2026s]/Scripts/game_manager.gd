@@ -4,11 +4,13 @@ extends Node
 
 @export var song_id: int = 0
 @export var scene_name: String = ""
+@export var current_id: int = 0
 var song_balls = 5
 
 func _ready() -> void:
 	MusicPlayer.get_stream_playback().switch_to_clip(song_id)
 	Enis_HUD.update_sceneName(scene_name)
+	Enis_HUD.update_questName(current_id)
 
 func _input(event):
 	if event.is_action_released("kill_app"):

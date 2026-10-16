@@ -13,6 +13,7 @@ unique_name_in_owner = true
 script = ExtResource("1_d6w4m")
 song_id = 2
 scene_name = "Irony"
+current_id = 7
 
 [node name="TileMap" type="Node" parent="." unique_id=356278897]
 
