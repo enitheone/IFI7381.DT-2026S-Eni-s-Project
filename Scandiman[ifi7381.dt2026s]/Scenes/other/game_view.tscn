@@ -16,7 +16,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xnbma")
-quest_names = ["Go to Hallway", "Go to Frontyard", "Talk to Wife Man", "Check Son Man", "Go to Store", "Find Alternative Way", "See yourself"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2057063367]
 
@@ -37,7 +36,6 @@ position = Vector2(38, 36)
 texture = ExtResource("4_7p0pf")
 
 [node name="SceneName" type="Label" parent="CanvasLayer" unique_id=832381272]
-unique_name_in_owner = true
 offset_left = 482.0
 offset_top = 552.0
 offset_right = 802.0
