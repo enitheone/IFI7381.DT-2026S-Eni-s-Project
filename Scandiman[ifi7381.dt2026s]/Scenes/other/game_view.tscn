@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dytfvybp1nmya"]
 
+[ext_resource type="FontFile" uid="uid://dn42j3hcgowv3" path="res://Assets/Graphics/Fonts/monostilus.ttf" id="1_fywic"]
 [ext_resource type="Texture2D" uid="uid://d1i25bmk58d2g" path="res://Assets/Graphics/icon_music.png" id="1_h7556"]
 [ext_resource type="Script" uid="uid://bro14qr54hfnh" path="res://music_button.gd" id="2_3k2u6"]
+[ext_resource type="Texture2D" uid="uid://b5y05vu540wym" path="res://Assets/Graphics/icon_redx.png" id="4_7p0pf"]
 
 [node name="GameView" type="Control" unique_id=740556808]
 layout_mode = 3
@@ -17,8 +19,16 @@ grow_vertical = 2
 offset_left = 1206.0
 offset_right = 1278.0
 offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("1_fywic")
+theme_override_font_sizes/font_size = 8
 button_pressed = true
 icon = ExtResource("1_h7556")
+autowrap_mode = 2
 script = ExtResource("2_3k2u6")
+
+[node name="RedX" type="Sprite2D" parent="CanvasLayer/MusicButton" unique_id=1980550605]
+visible = false
+position = Vector2(38, 36)
+texture = ExtResource("4_7p0pf")
 
 [connection signal="pressed" from="CanvasLayer/MusicButton" to="CanvasLayer/MusicButton" method="_on_pressed"]
