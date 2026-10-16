@@ -1,6 +1,9 @@
 extends Area2D
 @onready var story_label: Label = $StoryLabel
 @export var story_text = "Either you missed the Inspector or you made a mistake."
+@export var is_this_quest_ball = false
+@onready var game_manager: Node = %GameManager
+@export var this_scene: int = 0
 
 func _ready() -> void:
 	story_label.visible = false
@@ -8,7 +11,8 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	story_label.visible = true
-	
+	if is_this_quest_ball:
+		game_manager.update_quest(this_scene)
 
 func _on_body_exited(body: Node2D) -> void:
 	story_label.visible = false

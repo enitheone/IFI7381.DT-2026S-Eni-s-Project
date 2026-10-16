@@ -50,6 +50,8 @@ position = Vector2(8, -41)
 [node name="StoryBall_1" parent="StoryBalls" unique_id=590934876 instance=ExtResource("4_e5n6k")]
 position = Vector2(-65, -38)
 story_text = "ZZZ ...gonna be like him... ZZZ"
+is_this_quest_ball = true
+this_scene = 4
 
 [node name="StoryBall_2" parent="StoryBalls" unique_id=342500421 instance=ExtResource("4_e5n6k")]
 position = Vector2(-35, -47)

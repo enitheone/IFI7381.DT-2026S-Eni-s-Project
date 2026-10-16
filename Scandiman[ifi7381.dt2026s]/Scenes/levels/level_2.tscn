@@ -62,3 +62,4 @@ next_scene_id = 4
 position = Vector2(11, 117)
 this_scene_id = 2
 next_scene_id = 5
+is_this_quest_ball = true

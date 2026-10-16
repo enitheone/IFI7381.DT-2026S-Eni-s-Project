@@ -36,22 +36,32 @@ position = Vector2(24, -8)
 [node name="StoryBall_1" parent="StoryBalls" unique_id=590934876 instance=ExtResource("4_nv5l7")]
 position = Vector2(96, 48)
 story_text = "We're gonna have a good time then"
+is_this_quest_ball = true
+this_scene = 7
 
 [node name="StoryBall_2" parent="StoryBalls" unique_id=342500421 instance=ExtResource("4_nv5l7")]
 position = Vector2(-56, 80)
 story_text = "I don't know when, but we'll get together then"
+is_this_quest_ball = true
+this_scene = 7
 
 [node name="StoryBall_3" parent="StoryBalls" unique_id=1851586932 instance=ExtResource("4_nv5l7")]
 position = Vector2(0, -16)
 story_text = "When you comin' home, Dad"
+is_this_quest_ball = true
+this_scene = 7
 
 [node name="StoryBall_4" parent="StoryBalls" unique_id=43525528 instance=ExtResource("4_nv5l7")]
 position = Vector2(-64, -80)
 story_text = "Little boy blue and the man on the moon"
+is_this_quest_ball = true
+this_scene = 7
 
 [node name="StoryBall_5" parent="StoryBalls" unique_id=431804861 instance=ExtResource("4_nv5l7")]
 position = Vector2(112, -80)
 story_text = "And the cat's in the cradle and the silver spoon"
+is_this_quest_ball = true
+this_scene = 7
 
 [node name="Ghosts" type="Node" parent="." unique_id=264016671]
 

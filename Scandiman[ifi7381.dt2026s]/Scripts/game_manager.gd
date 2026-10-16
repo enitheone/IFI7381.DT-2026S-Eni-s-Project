@@ -4,6 +4,8 @@ extends Node
 
 @export var song_id: int = 0
 @export var scene_name: String = ""
+var song_balls = 5
+
 func _ready() -> void:
 	MusicPlayer.get_stream_playback().switch_to_clip(song_id)
 	Enis_HUD.update_sceneName(scene_name)
@@ -16,3 +18,14 @@ func _input(event):
 #func add_flames_out():
 #	flames_out -= 1
 #	flame_label.text = "Blue Flames remaining: " + str(flames_out)
+
+func update_quest(scene_id: int = 0):
+	if scene_id <= 0:
+		return
+	if scene_id == 7:
+		if song_balls > 0: #ENi Note: to assure that after finishing the quest, the number is not touhced any longer
+			song_balls -= 1
+			if song_balls <= 0:
+				Enis_HUD.questDone(scene_id)
+	else:
+		Enis_HUD.questDone(scene_id)

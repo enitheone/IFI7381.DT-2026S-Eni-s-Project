@@ -46,3 +46,4 @@ story_text = "Maybe that road takes me back home."
 position = Vector2(98, -82)
 this_scene_id = 6
 next_scene_id = 7
+is_this_quest_ball = true

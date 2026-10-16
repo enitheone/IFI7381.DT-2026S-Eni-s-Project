@@ -37,3 +37,4 @@ story_text = "Never start with the man in the mirror."
 position = Vector2(64, -24)
 this_scene_id = 1
 next_scene_id = 2
+is_this_quest_ball = true
