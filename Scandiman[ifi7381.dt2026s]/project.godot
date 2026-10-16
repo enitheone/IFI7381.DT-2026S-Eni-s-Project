@@ -28,6 +28,7 @@ buses/default_bus_layout="uid://bged05apie1d4"
 [autoload]
 
 MusicPlayer="*uid://dol7wjq64lfka"
+GameViewGlobal="*uid://dytfvybp1nmya"
 
 [display]
 

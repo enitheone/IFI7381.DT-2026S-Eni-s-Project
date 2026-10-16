@@ -11,14 +11,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MusicButton" type="MenuButton" parent="." unique_id=1518342153]
-layout_mode = 0
-offset_left = 1207.0
-offset_top = 1.0
-offset_right = 1279.0
-offset_bottom = 73.0
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2057063367]
+
+[node name="MusicButton" type="MenuButton" parent="CanvasLayer" unique_id=1518342153]
+offset_left = 1206.0
+offset_right = 1278.0
+offset_bottom = 72.0
 button_pressed = true
 icon = ExtResource("1_h7556")
 script = ExtResource("2_3k2u6")
 
-[connection signal="pressed" from="MusicButton" to="MusicButton" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/MusicButton" to="CanvasLayer/MusicButton" method="_on_pressed"]
