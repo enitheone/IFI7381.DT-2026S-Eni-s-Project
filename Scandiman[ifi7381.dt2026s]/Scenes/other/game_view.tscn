@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://dn42j3hcgowv3" path="res://Assets/Graphics/Fonts/monostilus.ttf" id="1_fywic"]
 [ext_resource type="Texture2D" uid="uid://d1i25bmk58d2g" path="res://Assets/Graphics/icon_music.png" id="1_h7556"]
+[ext_resource type="Script" uid="uid://cucidruoskl3p" path="res://Scenes/other/game_view.gd" id="1_xnbma"]
 [ext_resource type="Script" uid="uid://bro14qr54hfnh" path="res://music_button.gd" id="2_3k2u6"]
 [ext_resource type="Texture2D" uid="uid://b5y05vu540wym" path="res://Assets/Graphics/icon_redx.png" id="4_7p0pf"]
 [ext_resource type="FontFile" uid="uid://7onan86q4try" path="res://Assets/Graphics/Fonts/pc-senior.regular.ttf" id="5_pqt7j"]
@@ -13,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_xnbma")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2057063367]
 
@@ -33,6 +35,7 @@ position = Vector2(38, 36)
 texture = ExtResource("4_7p0pf")
 
 [node name="SceneName" type="Label" parent="CanvasLayer" unique_id=832381272]
+unique_name_in_owner = true
 offset_left = 482.0
 offset_top = 552.0
 offset_right = 802.0
