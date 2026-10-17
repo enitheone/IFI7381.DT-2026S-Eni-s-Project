@@ -18,6 +18,8 @@ func _input(event):
 	if event.is_action_released("restart"):
 		Enis_HUD.resetQuests()
 		get_tree().change_scene_to_file.call_deferred("res://Scenes/levels/level_1.tscn")
+	if event.is_action_pressed("move_right") && current_id == 1:
+		Enis_HUD.questDone(current_id)
 #func add_flames_out():
 #	flames_out -= 1
 #	flame_label.text = "Blue Flames remaining: " + str(flames_out)

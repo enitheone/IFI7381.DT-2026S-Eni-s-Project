@@ -179,3 +179,5 @@ target_position = Vector2(0, -8)
 [node name="RayCastD" type="RayCast2D" parent="." unique_id=1904552345]
 enabled = false
 target_position = Vector2(0, 8)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

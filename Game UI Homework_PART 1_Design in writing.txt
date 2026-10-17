@@ -1,0 +1,126 @@
+Basics of Game Development IFI7381.DT 2026S
+Topic 6 Homework
+-------------------------------
+Game UI -  Design in writing
+-------------------------------
+I am currently in limbo if I should continue with my already started project or postpone it for the future.
+For that reason, I created UI elements for the Story practice assignment, so I do not need to worry too much of overloading myself.
+
+In general:
+- after finding out that the Music can exists as a Global scene in Godot, I wanted to test if HUD can work in the same way
+	* I hated how it was alrways recreated in every scene in few previous projects, it it is something that should remain same with updated information
+- the goal was to make 3 elements for the HUD which work in all 7 scenes I have already built
+-------------------------------
+Element 1: Mute button
+-------------------------------
+What states can it be in?
+- it can be in two states:
+	* False - music plays
+	* True - music is muted (not paused)
+
+How does content get in, and out?
+- the content is in the game already (game music)
+- pressing the button is giving a feedback (mute on/off)
+
+How does it work with no mouse?
+- I did not pay attention to this requirement when I initially created it
+- now the button has also mapped for the keyboard (M) and USB controller (Y on the one I'm using)
+
+What confirms an action happened, or failed?
+- music is muted and red X is above the icon
+- I guess that failure would be that music plays while red X is on it or music is muted while no red X is visible
+- I did not encounter a failure status so it is difficult to debug 
+
+What happens at zero, at maximum, at longest string?
+- I removed the text because I did not see it working at all intially
+- Based on my quick tests after I built the project, the icon remains in the same location
+- if the window's aspect ration breaks the defined viewport's width by being bigger, then the icon remains where the viewport is considered to be
+=> this behavior places the icon above the "play view"
+=> I don't consider it currently as a problem but I will pay attention to locked screen sizes to assure that scaling and aspect rations are respected accurately
+
+Does it survive a save and load?
+- No
+- I did not program any save features, and I do not consider this project to be in a state that I should plan the design decision of saving the process
+- For what it is worth, the music mute survives the scene change and restarting the game
+=> more relevant for me currently, since it was part of my global variable learning goal
+
+How does a new player learn it exists?
+- via trial and error, yes
+- the game itself does not teach it because music button is not relevant for the story
+
+-------------------------------
+Element 2: Scene Name
+------------------------------- 
+
+What states can it be in?
+- it has only one state => informing the location name of the current scene
+
+How does content get in, and out?
+- each scene has a game manager which holds the name of its scene
+- when the scene is loaded, the game manager passes the information to the game view scene
+- the game view scene takes the information and presents it
+- nothing gets out, I guess
+
+How does it work with no mouse?
+- automated when the scene is changed
+- no mouse needed to play the game
+
+What confirms an action happened, or failed?
+- the action happened when the new scene loads and text has updated
+- I don't remember if I wrote a safety net text to inform that something went wrong
+
+What happens at zero, at maximum, at longest string?
+- Based on my quick tests after I built the project, the text remains in the same location
+- font size remains as what I defined as long as the window size is same or bigger than the defined viewport
+=> font shrinks when the window size get smaller
+- text's position has the same issues as with the Music Button icon
+
+Does it survive a save and load?
+- No
+
+How does a new player learn it exists?
+- I guess by looking at the screen and being able to read
+- I can agree that it is not the most accessible way to present the information
+=> I did not see a purpose to create a loading/transition screen between scenes for this project
+
+-------------------------------
+Element 3: Quest Log
+------------------------------- 
+
+What states can it be in?
+- always present: the main object the player has in the scene
+- boolean state: ok symbol appears if the player finished the quest
+
+How does content get in, and out?
+- each scene has a game manager which holds the name of its scene
+- when the scene is loaded, the game manager informs its scene id to the game view scene
+- the game view scene verifies that the provided scene has a quest
+- if there is a quest, it and its status will be printed on the screen
+- additionally, when a story/Warp ball can pass the collision information to the game manager if the ball is considered as the quest one
+
+How does it work with no mouse?
+- automated when the scene is changed
+- no mouse needed to play the game
+
+What confirms an action happened, or failed?
+- the action happened when the new scene loads and text has updated
+- the action also happened when the ok symbol appears above the quest name when the quest has been finished
+- I don't remember if I wrote a safety net text to inform that something went wrong
+
+What happens at zero, at maximum, at longest string?
+- Based on my quick tests after I built the project, the text remains in the same location
+- font size remains as what I defined as long as the window size is same or bigger than the defined viewport
+=> font shrinks when the window size get smaller
+- text's position has the same issues as with the Music Button icon
+
+Does it survive a save and load?
+- No
+- It was also not supposed to survive the reset, so I polished that the reset function turns the quest statuses back to false
+
+How does a new player learn it exists?
+- this is the most awkward one; the onboarding is not correct for this kind of story approach
+- I would have either needed to add another quest in the first room (like Move right) or redesigned the beginning of the story
+=> I was considering to add alternative quests for Scene 2 but my brain is too fried to think how I would code it AND counter if the player does something against the intented path
+==> ok, apparently I am
+==> toilet has only one exit so let the player's curiosity guide instead of the quest log
+==> I don't like that the game manager is checking the right pressing and the scene id for approving the quest but it Works for the onboarding purposes

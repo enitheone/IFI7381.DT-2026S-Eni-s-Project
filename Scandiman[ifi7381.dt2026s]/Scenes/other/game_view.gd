@@ -4,7 +4,7 @@ extends Control
 @onready var quest_name: Label = $CanvasLayer/QuestName
 @onready var ok: Sprite2D = $CanvasLayer/QuestName/OK
 
-@export var quest_list: Array = ["Go to Hallway", "Go to Frontyard", "Talk to Wife Man", "Check Son Man", "Go to Store", "Find Alternative Way", "See yourself"]
+@export var quest_list: Array = ["Move right", "Go to Frontyard", "Talk to Wife Man", "Check Son Man", "Go to Store", "Find Alternative Way", "See yourself"]
 @export var scenes_with_quests: Array = []
 
 var quest_statuses: Array = [false, false, false, false, false, false, false]
