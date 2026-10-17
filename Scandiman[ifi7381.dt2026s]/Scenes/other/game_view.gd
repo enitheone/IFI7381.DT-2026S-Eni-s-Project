@@ -39,3 +39,7 @@ func questDone(passed_id: int = -1):
 		return
 	quest_statuses[check_id] = true
 	ok.visible = quest_statuses[check_id]
+	
+func resetQuests():
+	for i in quest_statuses.size():
+		quest_statuses[i] = false

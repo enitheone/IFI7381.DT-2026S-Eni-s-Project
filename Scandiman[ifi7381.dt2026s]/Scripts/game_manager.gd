@@ -16,6 +16,7 @@ func _input(event):
 	if event.is_action_released("kill_app"):
 		get_tree().quit()
 	if event.is_action_released("restart"):
+		Enis_HUD.resetQuests()
 		get_tree().change_scene_to_file.call_deferred("res://Scenes/levels/level_1.tscn")
 #func add_flames_out():
 #	flames_out -= 1
